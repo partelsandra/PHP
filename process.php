@@ -1,13 +1,14 @@
 <?php
 require_once('database.php');
-if(isset($_POST['save']))
+if(isset($_POST['submit']))
 {	 
-	 $first_name = $_POST['first_name'];
-	 $last_name = $_POST['last_name'];
-	 $city_name = $_POST['city_name'];
-	 $email = $_POST['email'];
-	 $sql = "INSERT INTO employee (first_name,last_name,city_name,email)
-	 VALUES ('$first_name','$last_name','$city_name','$email')";
+	 $nimi = $_POST['nimi'];
+	 $sugu = $_POST['sugu$sugu'];
+	 $pikkus = $_POST['pikkus$pikkus'];
+	 $kaal = $_POST['kaal'];
+	 $synniaeg = $_POST['synniaeg'];
+	 $sql = "INSERT INTO employee (nimi,sugu,pikkus,kaal, synniaeg)
+	 VALUES ('$nimi','$sugu','$pikkus','$kaal', '$synniaeg')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {
