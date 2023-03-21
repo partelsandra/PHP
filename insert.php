@@ -14,22 +14,22 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>Nimi <input type="text" name="Nimi " required /></td>
+				<td>Nimi <input type="text" name="nimi " required /></td>
 			</tr>
 			<tr>
-				<td>sugu <input type="text" name="sugu " required /></td>
+				<td>sugu <input type="text" name="sugu" required /></td>
 			</tr>
 			<tr>
-				<td>pikkus <input type="int" name="sugu " required /></td>
+				<td>pikkus <input type="int" name="pikkus" required /></td>
 			</tr>
 			<tr>
-				<td>kaal <input type="int" name="kaal " required /></td>
+				<td>kaal <input type="int" name="kaal" required /></td>
 			</tr>
 			<tr>
-				<td>synniaeg <input type="date" name="synniaeg " required /></td>
+				<td>synniaeg <input type="date" name="synniaeg" required /></td>
 			</tr>
 			<tr>
-				<td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+				<td><button type="submit" name="submit"><strong>SAVE</strong></button></td>
 			</tr>
 		</table>
 	</form>

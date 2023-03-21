@@ -3,11 +3,11 @@ require_once('database.php');
 if(isset($_POST['submit']))
 {	 
 	 $nimi = $_POST['nimi'];
-	 $sugu = $_POST['sugu$sugu'];
-	 $pikkus = $_POST['pikkus$pikkus'];
+	 $sugu = $_POST['sugu'];
+	 $pikkus = $_POST['pikkus'];
 	 $kaal = $_POST['kaal'];
 	 $synniaeg = $_POST['synniaeg'];
-	 $sql = "INSERT INTO employee (nimi,sugu,pikkus,kaal, synniaeg)
+	 $sql = "INSERT INTO ISIKUD (nimi,sugu,pikkus,kaal,synniaeg)
 	 VALUES ('$nimi','$sugu','$pikkus','$kaal', '$synniaeg')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
@@ -17,4 +17,3 @@ if(isset($_POST['submit']))
 	 }
 	 mysqli_close($conn);
 }
-?>
