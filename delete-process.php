@@ -1,10 +1,10 @@
 <?php
 include_once 'database.php';
 
-if(isset($_GET['id']))
+if(isset($_GET['Isikud_id']))
 {	 
-	$id = $_GET['id'];
-	$sql = "DELETE FROM ISIKUD WHERE Isiku_id = '$id'";
+	$id = $_GET['Isikud_id'];
+	$sql = "DELETE FROM ISIKUD WHERE Isikud_id = '$id'";
 	if (mysqli_query($conn, $sql)) {
 		echo "Record deleted successfully";
 	} else {

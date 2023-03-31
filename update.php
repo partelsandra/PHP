@@ -5,7 +5,7 @@ $result = mysqli_query($conn,"SELECT * FROM ISIKUD");
 <!DOCTYPE html>
 <html>
  <head>
-   <title> Retrive data</title>
+   <title> Retrieve data</title>
    <link rel="stylesheet" href="style.css">
  </head>
 <body>
@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) > 0) {
 		<td><?php echo $row["pikkus"]; ?></td>
 		<td><?php echo $row["kaal"]; ?></td>
 		<td><?php echo $row["synniaeg"]; ?></td>
-		<td><a href="update-process.php?Isiku_id=<?php echo $row["Isikud_id"]; ?>">Update</a></td>
+		<td><a href="update-process.php?Isikud_id=<?php echo $row["Isikud_id"]; ?>">Update</a></td>
       </tr>
 			<?php
 			$i++;

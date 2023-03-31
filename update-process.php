@@ -1,7 +1,7 @@
 <?php
 include_once 'database.php';
 if(count($_POST)>0) {
-    mysqli_query($conn,"UPDATE ISIKUD SET nimi='" . $_POST['Nimi'] . "', sugu='" . $_POST['sugu'] . "', pikkus='" . $_POST['pikkus'] . "', kaal='" . $_POST['kaal'] . "', synniaeg='" . $_POST['synniaeg'] . "' WHERE Isiku_id='" . $_POST['Isiku_id'] . "'");
+    mysqli_query($conn,"UPDATE ISIKUD SET Nimi='" . $_POST['Nimi'] . "', sugu='" . $_POST['sugu'] . "', pikkus='" . $_POST['pikkus'] . "', kaal='" . $_POST['kaal'] . "', synniaeg='" . $_POST['synniaeg'] . "' WHERE Isikud_id='" . $_POST['Isikud_id'] . "'");
     $message = "Record Modified Successfully";
 }
 $result = mysqli_query($conn,"SELECT * FROM ISIKUD WHERE Isikud_id='" . $_GET['Isikud_id'] . "'");
@@ -21,7 +21,7 @@ $row= mysqli_fetch_array($result);
 </div>
 Nimi: <br>
 <input type="hidden" name="Isikud_id" value="<?php echo $row['Isikud_id']; ?>">
-<input type="text" name="Nimi" class="txtField" value="<?php echo $row['nimi']; ?>">
+<input type="text" name="Nimi" class="txtField" value="<?php echo $row['Nimi']; ?>">
 <br>
 Sugu: <br>
 <input type="text" name="sugu" class="txtField" value="<?php echo $row['sugu']; ?>">

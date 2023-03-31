@@ -36,7 +36,7 @@ while($row = mysqli_fetch_array($result)) {
     <td><?php echo $row["kaal"]; ?></td>
 	<td><?php echo $row["synniaeg"]; ?></td>
 	<td><a href = "update-process.php?Isikud_id=<?php echo $row["Isikud_id"]; ?>">Update</a></td>
-	<td><a href="delete.process.php?Isikud_id=<?php echo $row["Isikud_id"]; ?>">Delete</a></td>
+	<td><a href="delete-process.php?Isikud_id=<?php echo $row["Isikud_id"]; ?>">Delete</a></td>
 </tr>
 <?php
 $i++;
