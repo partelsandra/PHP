@@ -6,7 +6,7 @@ $result = mysqli_query($conn,"SELECT * FROM ISIKUD");
 <html>
  <head>
  <link rel="stylesheet" href="style.css">
- <title> Retrive data</title>
+ <title> Retrieve data</title>
  </head>
 <body>
 <?php

@@ -21,7 +21,7 @@ $row= mysqli_fetch_array($result);
 </div>
 Nimi: <br>
 <input type="hidden" name="Isikud_id" value="<?php echo $row['Isikud_id']; ?>">
-<input type="text" name="nimi" class="txtField" value="<?php echo $row['nimi']; ?>">
+<input type="text" name="Nimi" class="txtField" value="<?php echo $row['nimi']; ?>">
 <br>
 Sugu: <br>
 <input type="text" name="sugu" class="txtField" value="<?php echo $row['sugu']; ?>">
