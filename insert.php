@@ -14,7 +14,7 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>Nimi <input type="text" name="Nimi " required /></td>
+				<td>Nimi <input type="text" name="Nimi" required /></td>
 			</tr>
 			<tr>
 				<td>sugu <input type="text" name="sugu" required /></td>
