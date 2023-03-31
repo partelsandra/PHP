@@ -1,31 +1,41 @@
+<?php
+include_once 'database.php';
+if(count($_POST)>0) {
+    mysqli_query($conn,"UPDATE ISIKUD SET nimi='" . $_POST['Nimi'] . "', sugu='" . $_POST['sugu'] . "', pikkus='" . $_POST['pikkus'] . "', kaal='" . $_POST['kaal'] . "', synniaeg='" . $_POST['synniaeg'] . "' WHERE Isiku_id='" . $_POST['Isiku_id'] . "'");
+    $message = "Record Modified Successfully";
+}
+$result = mysqli_query($conn,"SELECT * FROM ISIKUD WHERE Isikud_id='" . $_GET['Isikud_id'] . "'");
+$row= mysqli_fetch_array($result);
+?>
 
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
-<title>Uuenda ISIKUD Andmeid</title>
+<title>Update ISIKUD Data</title>
 </head>
 <body>
 <form name="frmUser" method="post" action="">
-<div></div>
+<div><?php if(isset($message)) { echo $message; } ?>
+</div>
 <div style="padding-bottom:5px;">
-<a href="retrieve.php">Isikute List</a>
+<a href="update.php">Isikud</a>
 </div>
 Nimi: <br>
-<input type="text" name="Nimi" class="txtField" value="Aadu">
+<input type="hidden" name="Isikud_id" value="<?php echo $row['Isikud_id']; ?>">
+<input type="text" name="nimi" class="txtField" value="<?php echo $row['nimi']; ?>">
 <br>
-sugu: <br>
-<input type="text" name="sugu" class="txtField" value="M">
+Sugu: <br>
+<input type="text" name="sugu" class="txtField" value="<?php echo $row['sugu']; ?>">
 <br>
-pikkus :<br>
-<input type="int" name="pikkus" class="txtField" value="187">
+Pikkus: <br>
+<input type="text" name="pikkus" class="txtField" value="<?php echo $row['pikkus']; ?>">
 <br>
-kaal:<br>
-<input type="int" name="kaal" class="txtField" value="89">
+Kaal: <br>
+<input type="text" name="kaal" class="txtField" value="<?php echo $row['kaal']; ?>">
 <br>
-synniaeg:<br>
-<input type="date" name="synniaeg" class="txtField" value="1976-02-14">
-<br>
-<input type="submit" name="submit" value="Submit" class="button">
+Sünniaeg: <br>
+<input type="date" name="synniaeg" class="txtField" value="<?php echo $row['synniaeg']; ?>">
+<br><br>
+<input type="submit" name="submit" value="Submit">
 </form>
 </body>
 </html>

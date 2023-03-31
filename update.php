@@ -1,6 +1,6 @@
 <?php
 include_once 'database.php';
-$result = mysqli_query($conn,"SELECT * FROM employee");
+$result = mysqli_query($conn,"SELECT * FROM ISIKUD");
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,24 +14,25 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 <table>
 	  <tr>
-	    <td>Sl No</td>
-		<td>First Name</td>
-		<td>Last Name</td>
-		<td>City</td>
-		<td>Email id</td>
-		<td>Action</td>
+		<td>Isiku ID</td>
+	    <td>Nimi</td>
+		<td>sugu</td>
+		<td>pikkus</td>
+		<td>kaal</td>
+		<td>synniaeg</td>
 	  </tr>
 			<?php
 			$i=0;
 			while($row = mysqli_fetch_array($result)) {
 			?>
 	  <tr>
-	    <td><?php echo $row["id"]; ?></td>
-		<td><?php echo $row["first_name"]; ?></td>
-		<td><?php echo $row["last_name"]; ?></td>
-		<td><?php echo $row["city_name"]; ?></td>
-		<td><?php echo $row["email"]; ?></td>
-		<td><a href="update-process.php?id=<?php echo $row["id"]; ?>">Update</a></td>
+		<td><?php echo $row["Isikud_id"]; ?></td>
+	    <td><?php echo $row["Nimi"]; ?></td>
+		<td><?php echo $row["sugu"]; ?></td>
+		<td><?php echo $row["pikkus"]; ?></td>
+		<td><?php echo $row["kaal"]; ?></td>
+		<td><?php echo $row["synniaeg"]; ?></td>
+		<td><a href="update-process.php?Isiku_id=<?php echo $row["Isikud_id"]; ?>">Update</a></td>
       </tr>
 			<?php
 			$i++;
